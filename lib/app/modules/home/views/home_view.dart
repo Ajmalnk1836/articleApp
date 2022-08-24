@@ -23,31 +23,51 @@ class HomeView extends GetView<HomeController> {
                           "do you want to sure Logout?",
                           style: GoogleFonts.montserrat(),
                         ),
+                        SizedBox(
+                          height: 8,
+                        ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            ElevatedButton(
-                                onPressed: () {
-                                  AuthenticationscreenController.instance
-                                      .logout();
-                                },
-                                child: Text("Logout")),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            ElevatedButton(
-                                onPressed: () {
-                                  Get.back();
-                                },
-                                child: Text("No")),
+                            Container(
+                                height: getheight(context, 4),
+                                width: getwidth(context, 15),
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: TextButton(
+                                    onPressed: () {
+                                      AuthenticationscreenController.instance
+                                          .logout();
+                                    },
+                                    child: Text(
+                                      "Yes",
+                                      style: TextStyle(color: Colors.white),
+                                    ))),
+                            Container(
+                                height: getheight(context, 4),
+                                width: getwidth(context, 15),
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: TextButton(
+                                    onPressed: () {
+                                      Get.back();
+                                    },
+                                    child: Text(
+                                      "No",
+                                      style: TextStyle(color: Colors.white),
+                                    ))),
+                          
                           ],
                         )
                       ],
                     ),
                     radius: 10.0);
 
-                // Get.defaultDialog();
-                // AuthenticationscreenController.instance.logout();
+             
                 print("${controller.baseUrl + controller.apikey}");
               },
               icon: Icon(Icons.logout)),
