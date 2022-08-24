@@ -1,16 +1,9 @@
-# newsapp
+ # articleApplication
 
-A new Flutter project.
+This is flutter built article app integrated with nytimes api. In this app authentication (Login and signup) section connected to firebase, and fetching the latest top views articles integratted with nytimes api. In this project ,used in get x as statemanagement and route management, written with clean arichitecture using mvc structre.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Additional features
+ . Firebase authentication, Rest api integratted
+ 
+# Packaged Used
+  . get x, http, firebase authentication, firebase firestore, json annotation, json seraizable
